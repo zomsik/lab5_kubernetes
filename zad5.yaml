@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: zad5
+---
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: zad5qouta
+  namespace: zad5
+spec:
+  hard:
+    limits.cpu: "2000m"
+    limits.memory: 1.5Gi
+    pods: "10"
